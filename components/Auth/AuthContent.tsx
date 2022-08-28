@@ -5,6 +5,7 @@ import type { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import FlatButton from '../UI/FlatButton';
 import AuthForm from './AuthForm';
 import { Colors } from '../../constants/styles';
+import React from 'react';
 
 function AuthContent({ isLogin, onAuthenticate }: any) {
   const navigation = useNavigation() as any;
