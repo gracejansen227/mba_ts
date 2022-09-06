@@ -7,7 +7,17 @@ import AuthForm from './AuthForm';
 import { Colors } from '../../constants/styles';
 import React from 'react';
 
-function AuthContent({ isLogin, onAuthenticate }: any) {
+export type EmailPasswordProps = {
+  email: string;
+  password: string;
+};
+
+type AuthContentProps = {
+  isLogin: boolean;
+  onAuthenticate: (arg: EmailPasswordProps) => {};
+};
+
+function AuthContent({ isLogin, onAuthenticate }: AuthContentProps) {
   const navigation = useNavigation() as any;
 
   const [credentialsInvalid, setCredentialsInvalid] = useState({
